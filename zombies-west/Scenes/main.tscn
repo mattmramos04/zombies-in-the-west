@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://s7en1s75xuf7"]
+
+[ext_resource type="Texture2D" uid="uid://bofyop7ffvwp" path="res://Assets/Desert_Background_Sprites.png" id="1_jjvhh"]
+[ext_resource type="Script" uid="uid://7wf7ev6uxfr4" path="res://Scenes/Main.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bbofgeyfcjtlg" path="res://Scenes/zombie.tscn" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://q4wery2oi2m6" path="res://Assets/Cactus_Sprites.png" id="2_kry3j"]
+[ext_resource type="Texture2D" uid="uid://ddmuyjxn02lmh" path="res://Assets/Blank_Desert_Sprites.png" id="3_21xkr"]
+[ext_resource type="PackedScene" uid="uid://b57wmrnivwcdn" path="res://Scenes/defender.tscn" id="4_6bp64"]
+
+[node name="Main" type="Node2D" unique_id=1888396042]
+script = ExtResource("1_kry3j")
+zombie_scene = ExtResource("2_21xkr")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1702397053]
+position = Vector2(607, 330)
+scale = Vector2(18.03333, 10.766667)
+texture = ExtResource("1_jjvhh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=267125839]
+position = Vector2(16.692604, -5)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=1576285850]
+position = Vector2(-15.568242, -21.631956)
+scale = Vector2(0.14322986, 0.1703567)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=978592698]
+position = Vector2(1.6342411, -20.781246)
+scale = Vector2(0.13319907, 0.118863285)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background" unique_id=1172381487]
+position = Vector2(-20.42801, -5.46875)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background" unique_id=132051846]
+position = Vector2(18.793772, -20.15625)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background" unique_id=675175344]
+position = Vector2(11.67315, 13.28125)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Background" unique_id=1770316651]
+position = Vector2(-1.6342411, -3.90625)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Background" unique_id=836276112]
+position = Vector2(-12.723734, 14.6875)
+scale = Vector2(0.13156617, 0.16796875)
+texture = ExtResource("2_kry3j")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background" unique_id=252629924]
+modulate = Color(1, 1, 1, 0.3019608)
+position = Vector2(-30.233465, -0.31249997)
+scale = Vector2(0.15758753, 1)
+texture = ExtResource("3_21xkr")
+
+[node name="Defender" parent="." unique_id=1980907525 instance=ExtResource("4_6bp64")]
+position = Vector2(774, 305)
+
+[node name="Defender12" parent="." unique_id=808190794 instance=ExtResource("4_6bp64")]
+position = Vector2(876, 72)
+
+[node name="Defender9" parent="." unique_id=620899111 instance=ExtResource("4_6bp64")]
+position = Vector2(821, 558)
+
+[node name="Defender13" parent="." unique_id=998020008 instance=ExtResource("4_6bp64")]
+position = Vector2(706, 420)
+
+[node name="Defender10" parent="." unique_id=469974249 instance=ExtResource("4_6bp64")]
+position = Vector2(864, 312)
+
+[node name="Defender11" parent="." unique_id=1327727935 instance=ExtResource("4_6bp64")]
+position = Vector2(862, 237)
+
+[node name="Defender8" parent="." unique_id=751156391 instance=ExtResource("4_6bp64")]
+position = Vector2(778, 242)
+
+[node name="Defender2" parent="." unique_id=1255811940 instance=ExtResource("4_6bp64")]
+position = Vector2(690, 133)
+
+[node name="Defender3" parent="." unique_id=1719577752 instance=ExtResource("4_6bp64")]
+position = Vector2(677, 517)
+
+[node name="Defender5" parent="." unique_id=174512267 instance=ExtResource("4_6bp64")]
+position = Vector2(928, 509)
+
+[node name="Defender6" parent="." unique_id=638392936 instance=ExtResource("4_6bp64")]
+position = Vector2(969, 388)
+
+[node name="Defender7" parent="." unique_id=1097480018 instance=ExtResource("4_6bp64")]
+position = Vector2(987, 228)
+
+[node name="Defender4" parent="." unique_id=276194130 instance=ExtResource("4_6bp64")]
+position = Vector2(823, 275)

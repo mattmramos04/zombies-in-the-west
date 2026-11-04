@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b57wmrnivwcdn"]
+
+[ext_resource type="Script" uid="uid://bpogoka0yc2ud" path="res://Scenes/Defender.gd" id="1_wgqdj"]
+[ext_resource type="Texture2D" uid="uid://cujmoohyosjmn" path="res://Assets/TOWER_SHEET.png" id="2_47it6"]
+[ext_resource type="Texture2D" uid="uid://cqpb8ldrksfs1" path="res://Assets/GUN_SHEET.png" id="2_wgqdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgns8"]
+size = Vector2(31.5, 39)
+
+[node name="Defender" type="StaticBody2D" unique_id=1980907525 groups=["defender"]]
+script = ExtResource("1_wgqdj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=646333392]
+texture = ExtResource("2_47it6")
+hframes = 4
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=629518895]
+position = Vector2(-10, 0)
+scale = Vector2(1.15, 1)
+texture = ExtResource("2_wgqdj")
+flip_h = true
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476640707]
+position = Vector2(-2.25, 1)
+shape = SubResource("RectangleShape2D_lgns8")

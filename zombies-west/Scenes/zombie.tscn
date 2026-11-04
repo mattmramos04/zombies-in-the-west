@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bbofgeyfcjtlg"]
+
+[ext_resource type="Script" uid="uid://dbbjgomwpjc4a" path="res://Scenes/Zombie.gd" id="1_n70j1"]
+[ext_resource type="Texture2D" uid="uid://bruplfnfa24aa" path="res://Assets/spritesheet.png" id="2_n70j1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgns8"]
+size = Vector2(40, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hio4"]
+radius = 22.090721
+
+[node name="Zombie" type="CharacterBody2D" unique_id=1778552171]
+script = ExtResource("1_n70j1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1207604986]
+texture = ExtResource("2_n70j1")
+hframes = 4
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=821038703]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740836040]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_lgns8")
+
+[node name="AggroRange" type="Area2D" parent="." unique_id=1855349660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroRange" unique_id=1904748932]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_5hio4")
+
+[connection signal="body_entered" from="AggroRange" to="." method="_on_aggro_range_body_entered"]
+[connection signal="body_exited" from="AggroRange" to="." method="_on_aggro_range_body_exited"]
