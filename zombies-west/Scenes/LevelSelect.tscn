@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bkg32je6u6dpb"]
+
+[ext_resource type="Script" uid="uid://dknc220oded5e" path="res://Scenes/LevelSelect.gd" id="1_chbko"]
+
+[node name="LevelSelect" type="Control" unique_id=462642992]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_chbko")
+
+[node name="Button" type="Button" parent="." unique_id=1206663693]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 309.0
+offset_right = 599.0
+offset_bottom = 340.0
+text = "Town 1"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
